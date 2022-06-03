@@ -22,12 +22,12 @@ pipeline {
         }
         stage('DockerBuild'){
             steps{
-                sh "docker build -t webapp -f docker ."
+                sh "docker image build -t webapp -f docker ."
             }
         }
         stage('DockerContainer'){
             steps{
-                 sh "docker run -d -p 30013:8080 webapp"
+                 sh "docker container run -d -p 30013:8080 webapp"
             }
         }
     }
