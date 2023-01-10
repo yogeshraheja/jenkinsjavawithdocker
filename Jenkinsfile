@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
-        maven "yogeshmaven"
+        maven "mvn1"
     }
    stages {
         stage('Build') {
